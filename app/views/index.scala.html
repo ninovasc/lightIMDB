@@ -1,5 +1,11 @@
-@()
+@(login: Boolean)
 
 @main("IMDB rocks on Play :)") {
-  <h1>Bem vindo ao (pseudo) sistema IMDB!</h1>
+  @if(login) {
+    <h1>Bem vindo ao (pseudo) sistema IMDB!</h1>
+    <p>Aqui podemos inserir filmes, verificar informações sobre filmes e avaliar filmes!</p>
+  } else {
+    <h1>NOT Bem vindo ao (pseudo) sistema IMDB!</h1>
+    <p>Aqui podemos inserir filmes, verificar informações sobre filmes e avaliar filmes!</p>
+  }
 }

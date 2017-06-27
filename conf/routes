@@ -6,9 +6,11 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
-GET     /filme                     controllers.FilmeController.listar
-GET		/filme/novo                controllers.FilmeController.novoFilme
-POST	/filme                     controllers.FilmeController.novoFilmeSubmissao
+GET     /signup                     controllers.UsuarioController.novoUsuario
+POST    /welcome                    controllers.UsuarioController.novoUsuarioSubmissao
+GET     /filme                      controllers.FilmeController.listar
+GET		/filme/novo                 controllers.FilmeController.novoFilme
+POST	/filme                      controllers.FilmeController.novoFilmeSubmissao
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

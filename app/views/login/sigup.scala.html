@@ -1,0 +1,12 @@
+@(usuarioForm: Form[UsuarioVO])(implicit messages: Messages)
+
+@main("Sign Up") {
+  @helper.form(action = routes.UsuarioController.novoUsuarioSubmissao()) {
+    @helper.inputText(usuarioForm("Email"))
+    @helper.inputText(usuarioForm("Senha"))
+
+    <div class="form-actions">
+      <button type="submit">Sign Up</button>
+    </div>
+  }
+}
